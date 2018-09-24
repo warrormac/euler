@@ -4,18 +4,23 @@ using namespace std;
 
 int main()
 {
-    int a=1,b=1,c=1000,d=0;
+    int a=1,b=1,x=1,c=1200,d=0;
     while (d!=1)
     {
-        d=(a*a)+(b*b);
+        d=(a*a)+(b*b)+(x*x);
         if (d==c)
         {
-            cout<<a<<" "<<b;
+            cout<<a<<" "<<b<<" "<<x;
             d=1;
         }
 
-        if (b<c)
+        if (x<c)
+            x++;
+        if (x==c)
+        {
+            x=1;
             b++;
+        }
         if (b==c)
         {
             b=1;
@@ -24,3 +29,4 @@ int main()
 
     }
 }
+
