@@ -2,24 +2,25 @@
 
 using namespace std;
 
-int div(int a)
-{
-    int b=1;
-    while (b<=20)
-    {
-        if (a%b!=0)
-        {
-            a++;
-            b=1;
-        }
-        b++;
-
-    }
-    cout<<a;
-
-}
 int main()
 {
-    int a=2520;
-    div(a);
+	int x,numero;
+	cout<<"ingresa 1 numero"<<endl;
+	cin>>x;
+	for(int y=1;;y++)
+    {
+        int c=0;
+            for(int z=1;z<=x;z++){
+                if(y%z==0){
+                    c++;
+                }
+            }
+        if(c==x)
+        {
+            numero=y;
+            break;
+        }
+	}
+	cout<<"menor numero divisible es "<<numero;
+
 }
